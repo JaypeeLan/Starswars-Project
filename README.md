@@ -2,7 +2,7 @@
 
 [LIVE](https://starswars-project.vercel.app/) <br/>
 
-**If you clone the repo and you get any error when deploying, ran npm innstall --legacy-peer-deps**
+**If you clone the repo and you get any error when deploying, run "npm innstall --legacy-peer-deps"**
 
 Built with react js and [Star Wars Api](https://swapi.dev/documentation) <br/>
 
