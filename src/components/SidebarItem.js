@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Logo from "../Images/Logo.png";
-import { GridSmall, LogoutIcon, NavItemIcon } from "../Images/SvgIcons";
-import { useLogin } from "../shared/hooks/useLogin";
+import { GridSmall, NavItemIcon } from "../Images/SvgIcons";
 import NavLink from "./NavLink";
 
 const navItems = [
@@ -64,20 +63,6 @@ const Nav = styled.div`
   font-family: "Inter";
   font-weight: 600;
   font-size: 16px;
-`;
-
-const LogOut = styled.div`
-  position: absolute;
-  bottom: 4rem;
-  button {
-    background: none;
-    padding: 0;
-    border: none;
-    outline: none;
-    height: 48px;
-    width: 100%;
-    padding: 0 2rem;
-  }
 `;
 
 export default SidebarItem;

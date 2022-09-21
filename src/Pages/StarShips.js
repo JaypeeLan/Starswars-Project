@@ -4,9 +4,12 @@ import AppLayout from "../components/AppLayout";
 import Table from "../components/Table";
 import useFetch from "../shared/hooks/useFetch";
 import { starshipColumn } from "../shared/Data";
+import { useLogin } from "../shared/hooks/useLogin";
 
 function StarShips() {
   const navigate = useNavigate();
+  const location = useLocation();
+  const { loggedIn } = useLogin();
   const [rowData, setRowData] = useState([]);
   const { data, error, isLoading } = useFetch(
     "https://swapi.dev/api/starships"
@@ -29,6 +32,9 @@ function StarShips() {
       setRowData(filtered);
     }
   }, [data]);
+
+  if (!loggedIn)
+    return <Navigate to="/login" state={{ from: location }} replace />;
 
   return (
     <AppLayout>
